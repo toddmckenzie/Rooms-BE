@@ -7,7 +7,7 @@ module.exports = {
 }
 
 
-function getRooms(id){
+function getRooms(){
     return db('rooms')
 }
 
