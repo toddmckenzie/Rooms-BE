@@ -1,4 +1,4 @@
-const db = require('../database.dbConfig.js');
+const db = require('../database/dbConfig.js');
 
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
 
 
 function getRooms(id){
-    return db('rooms').where({ user_id: id })
+    return db('rooms')
 }
 
 function addRoom(room){

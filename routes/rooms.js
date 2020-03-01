@@ -3,12 +3,10 @@ const db = require('../models/rooms.js');
 
 
 
-router.get('/:id', (req, res) => {
-    const userId = req.params.id;
-
+router.get('/', (req, res) => {
 
     db
-    .getRooms(userId)
+    .getRooms()
     .then(result => {
         console.log(result);
         res.json(result)
@@ -19,10 +17,9 @@ router.get('/:id', (req, res) => {
 })
 
 
-router.post('/:id', (req, res) => {
-    const userId = req.params.id;
-    let room = req.body;
-    room.user_id = userId
+router.post('/', (req, res) => {
+    const room = req.body;
+    
     db
     .addRoom(room)
     .then(result => {
