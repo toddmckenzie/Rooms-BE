@@ -3,7 +3,8 @@ const db = require('../database/dbConfig.js');
 
 module.exports = {
     getRooms,
-    addRoom
+    addRoom,
+    remove
 }
 
 
@@ -13,4 +14,8 @@ function getRooms(){
 
 function addRoom(room){
     return db('rooms').insert(room)
+}
+
+function remove(id){
+    return db('rooms').del({ id })
 }
