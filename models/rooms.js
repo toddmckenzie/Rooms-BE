@@ -12,8 +12,9 @@ function getRooms(){
     return db('rooms')
 }
 
-function addRoom(room){
-    return db('rooms').insert(room)
+async function addRoom(room){
+    await db('rooms').insert(room)
+    return db('rooms')
 }
 
 function remove(id){
