@@ -12,6 +12,10 @@ exports.up = function(knex) {
         tbl.boolean('s_exit').defaultTo(false);
         tbl.boolean('w_exit').defaultTo(false);
         tbl.boolean('e_exit').defaultTo(false);
+        tbl.string('n').defaultTo('?');
+        tbl.string('s').defaultTo('?');
+        tbl.string('w').defaultTo('?');
+        tbl.string('e').defaultTo('?');
         
     })
 };
